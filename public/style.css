@@ -77,34 +77,36 @@
   font-size: 16px;
 }
 
-.sprite img{
+.sprite img {
   margin: auto;
   width: 100%;
 }
 
-
-.copy-container{
-  display: flex;
+.copy-container {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   margin: 10px;
-}
-
-#copyButton {
-  cursor: pointer;
   display: none;
   visibility: hidden;
 }
 
-#sprite-preview{
+.copy-container p {
+  margin-inline-end: auto;
+  color: var(--primary);
+}
+
+#copyButton {
+  cursor: pointer;
+}
+
+#sprite-preview {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* flex-wrap: wrap; */ 
+  /* flex-wrap: wrap; */
   margin-bottom: 30px;
 }
-
 
 #no-sprite-sheet-view {
   display: flex;
@@ -122,6 +124,20 @@
 
 #no-sprite-sheet-view p {
   color: var(--secondary);
+}
+
+#sprite-sheet-preview {
+  /* max-width: 500px; */
+}
+
+#sprite-sheet {
+  text-align: start;
+  /* white-space: pre; */
+  margin-top: 20px;
+  padding: 10px;
+  font-size: small;
+  max-height: 150px;
+  overflow-y: auto;
 }
 
 #sprite-sheet-container {
@@ -152,8 +168,8 @@
 
 #copyRefButton {
   cursor: pointer;
-  display: none;
-  visibility: hidden;
+  /* display: none;
+  visibility: hidden; */
 }
 
 #no-ref-styling-code-view {
@@ -177,6 +193,16 @@
 #spriteSheetRefCodeLoading {
   display: none;
   visibility: hidden;
+}
+
+#htmlRefCodeContent {
+  text-align: start;
+  /* white-space: pre; */
+  margin-top: 20px;
+  padding: 10px;
+  font-size: small;
+  max-height: 150px;
+  overflow-y: auto;
 }
 
 /* sticky footer */

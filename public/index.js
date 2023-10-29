@@ -5,6 +5,8 @@ let fileUploaderInput,
   spriteSheetContainer,
   refCode,
   spriteSheetDownloadButton,
+  spriteCopyContainer,
+  refCopyContainer,
   copyButton,
   copyRefButton,
   htmlRefCodeContent;
@@ -25,6 +27,9 @@ window.onload = () => {
   dropZone.addEventListener("dragover", handleDragOver);
   dropZone.addEventListener("dragleave", handleDragLeave);
   dropZone.addEventListener("drop", handleDrop);
+
+  spriteCopyContainer = document.getElementById("sprite-copy-container");
+  refCopyContainer = document.getElementById("ref-copy-container");
 
   copyButton = document.getElementById("copyButton");
   copyRefButton = document.getElementById("copyRefButton");
@@ -109,13 +114,13 @@ const fileUploaderOnchange = () => {
     spriteSheetProgress.style.visibility = "visible";
     noSpriteSheetView.style.display = "none";
     noSpriteSheetView.style.visibility = "hidden";
-    copyButton.style.display = "none";
-    copyButton.style.visibility = "hidden";
+    spriteCopyContainer.style.display = "none";
+    spriteCopyContainer.style.visibility = "hidden";
     setTimeout(() => {
       spriteSheetProgress.style.display = "none";
       spriteSheetProgress.style.visibility = "hidden";
-      copyButton.style.display = "block";
-      copyButton.style.visibility = "visible";
+      spriteCopyContainer.style.display = "flex";
+      spriteCopyContainer.style.visibility = "visible";
     }, 1000);
     reader.readAsDataURL(file);
   });
@@ -207,13 +212,13 @@ const htmlRefCode = () => {
   let noRefCodeView = document.getElementById("no-ref-styling-code-view");
   noRefCodeView.style.display = "none";
   noRefCodeView.style.visibility = "hidden";
-  copyRefButton.style.display = "none";
-  copyRefButton.style.visibility = "hidden";
+  refCopyContainer.style.display = "none";
+  refCopyContainer.style.visibility = "hidden";
   setTimeout(() => {
     spriteSheetRefCodeLoading.style.display = "none";
     spriteSheetRefCodeLoading.style.visibility = "hidden";
-    copyRefButton.style.display = "block";
-    copyRefButton.style.visibility = "visible";
+    refCopyContainer.style.display = "flex";
+    refCopyContainer.style.visibility = "visible";
     htmlRefCodeContent.innerText = refCode;
   }, 1000);
 };

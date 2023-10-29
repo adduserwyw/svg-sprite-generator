@@ -31,6 +31,7 @@
           <li role="list" dir="rtl">
             <a href="#" aria-haspopup="listbox">Tools</a>
             <ul role="listbox" style="text-align: center">
+              <li style="font-size: 15px"><a>CSS Sprite Generator</a></li>
               <li style="font-size: 15px"><a href="https://css-sprite-generator.vercel.app/" target="_blank">CSS Sprite Generator</a></li>
               <li style="font-size: 15px"><a>RGB-HEX converter</a></li>
               <li style="font-size: 15px"><a>More</a></li>
@@ -88,7 +89,8 @@
     <div class="container">
       <h3>Generated SVG sprite output</h3>
       <article id="sprite-sheet-preview">
-        <div class="copy-container">
+        <div class="copy-container" id="sprite-copy-container">
+          <p>scroll to see all</p>
           <a href="#" role="button" class="outline" id="copyButton">Copy</a>
         </div>
         <div id="no-sprite-sheet-view">
@@ -103,7 +105,8 @@
     <div class="container">
       <h3>Ref Code</h3>
       <article>
-        <div class="copy-container">
+        <div class="copy-container" id="ref-copy-container">
+          <p>scroll to see all</p>
           <a href="#" role="button" class="outline" id="copyRefButton">Copy</a>
         </div>
         <div id="no-ref-styling-code-view">
