@@ -1,0 +1,195 @@
+:root {
+  /* --primary:wheat;   */
+  font-family: "Hack", monospace;
+}
+
+@font-face {
+  font-family: "Hack";
+  src: url("./fonts/Hack-Regular.ttf") format("truetype"),
+    /* Regular */ url("./fonts/Hack-Bold.ttf") format("truetype"); /* Bold */
+}
+
+#sprite-preview img {
+  margin: 5px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.container h1 {
+  margin-top: 40px;
+  text-align: center;
+  font-family: "Hack", monospace;
+}
+
+.container p {
+  text-align: center;
+}
+
+#css-sprites-info a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+#file-upload-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#file-upload-container p {
+  font-size: 14px;
+}
+
+.container h3 {
+  text-align: center;
+  font-family: "Hack", monospace;
+}
+
+.container h5 {
+  text-align: center;
+  font-family: "Hack", monospace;
+}
+
+.drop-zone {
+  display: flex;
+  border: 2px dashed var(--secondary-focus);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  /* background-color: var(--secondary-focus); */
+}
+
+#file-upload-list {
+  padding: 30px;
+  margin-bottom: -5%;
+}
+
+#file-upload-list input {
+  justify-content: center;
+  align-self: center;
+  font-size: 16px;
+}
+
+.sprite img{
+  margin: auto;
+  width: 100%;
+}
+
+
+.copy-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
+}
+
+#copyButton {
+  cursor: pointer;
+  display: none;
+  visibility: hidden;
+}
+
+#sprite-preview{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* flex-wrap: wrap; */ 
+  margin-bottom: 30px;
+}
+
+
+#no-sprite-sheet-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  color: var(--secondary);
+}
+
+#no-sprite-sheet-view i {
+  font-size: 50px;
+  padding: 50px 0px;
+}
+
+#no-sprite-sheet-view p {
+  color: var(--secondary);
+}
+
+#sprite-sheet-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+#spriteSheetProgress {
+  display: none;
+  visibility: hidden;
+}
+
+#download-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#spriteSheetDownloadButton {
+  align-self: center;
+  width: auto;
+  margin-bottom: 50px;
+}
+
+#copyRefButton {
+  cursor: pointer;
+  display: none;
+  visibility: hidden;
+}
+
+#no-ref-styling-code-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  color: var(--secondary);
+}
+
+#no-ref-styling-code-view i {
+  font-size: 50px;
+  padding: 50px 0px;
+}
+
+#no-ref-styling-code-view p {
+  color: var(--secondary);
+}
+
+#spriteSheetRefCodeLoading {
+  display: none;
+  visibility: hidden;
+}
+
+/* sticky footer */
+html,
+body {
+  height: 100vh;
+}
+
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+.footer-emoji {
+  font-family: "Times New Roman", Times, serif;
+}

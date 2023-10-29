@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="wendy" />
+    <meta name="description" content="SVG Sprite Generator" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <!-- js -->
+    <script src="index.js"></script>
+    <title>SVG Sprite Generator</title>
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <div class="container">
+      <nav>
+        <ul>
+          <li><strong>CSSTools</strong></li>
+        </ul>
+        <ul>
+          <li role="list" dir="rtl">
+            <a href="#" aria-haspopup="listbox">Tools</a>
+            <ul role="listbox" style="text-align: center">
+              <li style="font-size: 15px"><a href="css-sprite-generator.vercel.app" target="_blank">CSS Sprite Generator</a></li>
+              <li style="font-size: 15px"><a>RGB-HEX converter</a></li>
+              <li style="font-size: 15px"><a>More</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://github.com/wendy-YW" target="_blank">
+              <i class="fa fa-github" style="font-size: 36px"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container" id="css-sprites-info">
+      <h1>SVG Sprite Generator</h1>
+      <a
+        href="https://css-tricks.com/svg-sprites-use-better-icon-fonts/"
+        target="_blank"
+        data-tooltip="what they are and how to use them?"
+        data-placement="top"
+        ><p>
+          What are svg sprites?
+          <i class="fa fa-info-circle" aria-hidden="true"></i></p
+      ></a>
+    </div>
+    <!-- upload -->
+    <div class="container">
+      <article id="sprite-sheet-upload-view">
+        <div id="file-upload-container">
+          <h3>Upload your SVGs</h3>
+          <!-- <p>(Note: Please don’t upload BIG files.)</p> -->
+          <div class="drop-zone" id="dropZone">
+            <div id="file-upload-list">
+              <span
+                id="drop-zone__prompt"
+                style="font-size: 70%; color: var(--secondary)"
+                >Drag & Drop files here or click to upload</span
+              >
+              <div id="file-upload-list">
+                <input
+                  type="file"
+                  id="fileUploaderInput"
+                  name="file"
+                  multiple
+                  accept="image/svg+xml"
+                />
+                <div id="sprite-preview"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- sprite sheet preview -->
+    <div class="container">
+      <h3>Generated SVG sprite output</h3>
+      <article id="sprite-sheet-preview">
+        <div class="copy-container">
+          <a href="#" role="button" class="outline" id="copyButton">Copy</a>
+        </div>
+        <div id="no-sprite-sheet-view">
+          <i class="fa fa-code" aria-hidden="true"></i>
+          <p>Upload some svgs to generate a SVG sprite output.</p>
+        </div>
+        <progress id="spriteSheetProgress"></progress>
+        <div id="sprite-sheet"></div>
+      </article>
+    </div>
+    <!-- ref code -->
+    <div class="container">
+      <h3>Ref Code</h3>
+      <article>
+        <div class="copy-container">
+          <a href="#" role="button" class="outline" id="copyRefButton">Copy</a>
+        </div>
+        <div id="no-ref-styling-code-view">
+          <i class="fa fa-code" aria-hidden="true"></i>
+          <p>Generate a sprite sheet to see the Ref code.</p>
+        </div>
+        <a href="#" aria-busy="true" id="spriteSheetRefCodeLoading"
+          >Generating code, please wait…</a
+        >
+        <div id="htmlRefCodeContent"></div>
+      </article>
+    </div>
+    <!-- download -->
+    <div class="container" id="download-container">
+      <h3>Sprite Download</h3>
+      <button id="spriteSheetDownloadButton">Download Sprite</button>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <p>
+          <strong>CSSTools</strong> made with
+          <strong class="footer-emoji">&#9749;</strong> by
+          <a href="https://github.com/wendy-YW" target="_blank">Wendy</a> from
+          LAB
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
